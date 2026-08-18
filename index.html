@@ -2,6 +2,27 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function () {
+        function extractAssets(html) {
+          var matches = html.match(/assets\/[\w.-]+\.(js|css)/g) || [];
+          return matches.sort().join(",");
+        }
+        fetch(location.pathname, { cache: "no-store" })
+          .then(function (res) {
+            return res.text();
+          })
+          .then(function (freshHtml) {
+            var fresh = extractAssets(freshHtml);
+            var current = extractAssets(document.documentElement.outerHTML);
+            if (fresh && current && fresh !== current && !sessionStorage.getItem("c8_reloaded")) {
+              sessionStorage.setItem("c8_reloaded", "1");
+              location.replace(location.pathname + "?_v=" + Date.now());
+            }
+          })
+          .catch(function () {});
+      })();
+    </script>
     <link rel="icon" type="image/webp" href="/src/assets/logo.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Barbería Calle Ocho — Cortes, barba y experiencia VIP en un solo lugar. Reserva tu cita por WhatsApp." />
