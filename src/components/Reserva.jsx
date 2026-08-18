@@ -138,6 +138,7 @@ export default function Reserva() {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
+          noValidate
           className={`rounded-[2rem] border border-line bg-panel p-7 md:p-10 [color-scheme:dark] transition-all duration-700 ease-out hover:border-gold/30 ${
             formInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
