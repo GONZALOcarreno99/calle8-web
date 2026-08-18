@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import galeria5 from "../assets/galeria/local-5.jpg";
+import galeria5 from "../assets/galeria/local-5.webp";
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);

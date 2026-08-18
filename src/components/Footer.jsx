@@ -1,4 +1,4 @@
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.webp";
 import { WHATSAPP_NUMBER, whatsappLink } from "../data/site";
 import useReveal from "../hooks/useReveal";
 

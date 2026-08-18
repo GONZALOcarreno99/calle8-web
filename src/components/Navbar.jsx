@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.webp";
 import { useCart } from "../context/CartContext";
 
 const LINKS = [

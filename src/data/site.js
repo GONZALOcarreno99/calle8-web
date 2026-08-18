@@ -1,8 +1,8 @@
-import galeria1 from "../assets/galeria/local-1.jpg";
-import galeria2 from "../assets/galeria/local-2.jpg";
-import galeria3 from "../assets/galeria/local-3.jpg";
-import galeria4 from "../assets/galeria/local-4.jpg";
-import galeria5 from "../assets/galeria/local-5.jpg";
+import galeria1 from "../assets/galeria/local-1.webp";
+import galeria2 from "../assets/galeria/local-2.webp";
+import galeria3 from "../assets/galeria/local-3.webp";
+import galeria4 from "../assets/galeria/local-4.webp";
+import galeria5 from "../assets/galeria/local-5.webp";
 
 export const WHATSAPP_NUMBER = "51903310311";
 
