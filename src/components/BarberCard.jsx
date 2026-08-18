@@ -25,7 +25,7 @@ export default function BarberCard({ b, index }) {
         {inView && <span className="animate-flash pointer-events-none absolute inset-0 bg-gold" />}
         <span className="shine-sweep pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
       </div>
-      <h3 className="font-display text-2xl tracking-wide mt-6 transition-colors duration-300 group-hover:text-gold">
+      <h3 className="font-display text-2xl tracking-wide mt-6 transition-colors duration-300 group-hover:text-gold group-active:text-gold">
         {b.nombre}
       </h3>
       <p className="text-gold text-xs uppercase tracking-[0.15em] mt-1">{b.especialidad}</p>

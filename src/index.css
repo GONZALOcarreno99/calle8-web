@@ -91,6 +91,7 @@ body {
 }
 
 .link-underline:hover::after,
+.link-underline:active::after,
 .link-underline.active::after {
   width: 100%;
 }

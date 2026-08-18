@@ -25,7 +25,7 @@ export default function Lightbox({ images, index, onClose, onPrev, onNext }) {
       <button
         onClick={onClose}
         aria-label="Cerrar"
-        className="absolute top-5 right-5 z-10 h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white transition-all duration-300 hover:border-gold hover:text-gold hover:rotate-90"
+        className="absolute top-5 right-5 z-10 h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white transition-all duration-300 hover:border-gold hover:text-gold hover:rotate-90 active:border-gold active:text-gold active:rotate-90"
       >
         ✕
       </button>
@@ -33,14 +33,14 @@ export default function Lightbox({ images, index, onClose, onPrev, onNext }) {
       <button
         onClick={onPrev}
         aria-label="Anterior"
-        className="absolute left-3 md:left-6 z-10 h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white transition-all duration-300 hover:border-gold hover:text-gold hover:-translate-x-1"
+        className="absolute left-3 md:left-6 z-10 h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white transition-all duration-300 hover:border-gold hover:text-gold hover:-translate-x-1 active:border-gold active:text-gold active:-translate-x-1"
       >
         ‹
       </button>
       <button
         onClick={onNext}
         aria-label="Siguiente"
-        className="absolute right-3 md:right-6 z-10 h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white transition-all duration-300 hover:border-gold hover:text-gold hover:translate-x-1"
+        className="absolute right-3 md:right-6 z-10 h-11 w-11 rounded-full border border-white/20 flex items-center justify-center text-white transition-all duration-300 hover:border-gold hover:text-gold hover:translate-x-1 active:border-gold active:text-gold active:translate-x-1"
       >
         ›
       </button>

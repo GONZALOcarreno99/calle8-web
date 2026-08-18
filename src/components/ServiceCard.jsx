@@ -11,7 +11,7 @@ export default function ServiceCard({ s, index, onReservar }) {
       ref={ref}
       style={{ transitionDelay: inView ? `${index * 120}ms` : "0ms" }}
       className={`group relative flex flex-col rounded-[2rem] bg-panel border transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-[0_25px_60px_-20px_rgba(184,147,90,0.4)] active:shadow-[0_25px_60px_-20px_rgba(184,147,90,0.4)] ${
-        s.destacado ? "border-gold animate-pulse-gold" : "border-line hover:border-gold/50"
+        s.destacado ? "border-gold animate-pulse-gold" : "border-line hover:border-gold/50 active:border-gold/50"
       } ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
     >
       {s.destacado && (

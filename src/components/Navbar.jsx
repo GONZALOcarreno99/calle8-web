@@ -47,14 +47,14 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto flex items-center justify-between px-5 py-4">
         <a href="#top" className="group flex items-center gap-3">
-          <div className="relative h-10 w-10 rounded-full ring-1 ring-gold/0 transition-all duration-500 group-hover:ring-2 group-hover:ring-gold group-hover:scale-110 group-hover:shadow-[0_0_18px_rgba(184,147,90,0.6)]">
+          <div className="relative h-10 w-10 rounded-full ring-1 ring-gold/0 transition-all duration-500 group-hover:ring-2 group-active:ring-2 group-hover:ring-gold group-active:ring-gold group-hover:scale-110 group-active:scale-110 group-hover:shadow-[0_0_18px_rgba(184,147,90,0.6)] group-active:shadow-[0_0_18px_rgba(184,147,90,0.6)]">
             <img
               src={logo}
               alt="Calle Ocho Barber Shop"
-              className="h-full w-full rounded-full object-cover transition-transform duration-700 group-hover:rotate-[360deg]"
+              className="h-full w-full rounded-full object-cover transition-transform duration-700 group-hover:rotate-[360deg] group-active:rotate-[360deg]"
             />
           </div>
-          <span className="font-display text-lg sm:text-2xl tracking-[0.1em] sm:tracking-[0.15em] leading-none transition-colors duration-300 group-hover:text-gold">
+          <span className="font-display text-lg sm:text-2xl tracking-[0.1em] sm:tracking-[0.15em] leading-none transition-colors duration-300 group-hover:text-gold group-active:text-gold">
             CALLE OCHO
           </span>
         </a>

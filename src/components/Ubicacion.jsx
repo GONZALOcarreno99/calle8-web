@@ -28,7 +28,7 @@ export default function Ubicacion() {
                 leftInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
               }`}
             >
-              <span className="relative mt-0.5 h-8 w-8 shrink-0 rounded-full border border-gold/40 flex items-center justify-center text-gold text-sm transition-transform duration-300 group-hover:scale-110 group-hover:border-gold">
+              <span className="relative mt-0.5 h-8 w-8 shrink-0 rounded-full border border-gold/40 flex items-center justify-center text-gold text-sm transition-transform duration-300 group-hover:scale-110 group-active:scale-110 group-hover:border-gold group-active:border-gold">
                 <span className="absolute inset-0 rounded-full animate-pulse-gold" />
                 📍
               </span>
@@ -40,7 +40,7 @@ export default function Ubicacion() {
                 leftInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
               }`}
             >
-              <span className="mt-0.5 h-8 w-8 shrink-0 rounded-full border border-gold/40 flex items-center justify-center text-gold text-sm transition-transform duration-300 group-hover:scale-110 group-hover:border-gold group-hover:rotate-12">
+              <span className="mt-0.5 h-8 w-8 shrink-0 rounded-full border border-gold/40 flex items-center justify-center text-gold text-sm transition-transform duration-300 group-hover:scale-110 group-active:scale-110 group-hover:border-gold group-active:border-gold group-hover:rotate-12 group-active:rotate-12">
                 🕒
               </span>
               <p className="text-white/70 text-sm leading-relaxed">{HORARIO_TEXTO}</p>
@@ -71,7 +71,7 @@ export default function Ubicacion() {
         <div
           ref={mapRef}
           style={{ transitionDelay: mapInView ? "150ms" : "0ms" }}
-          className={`relative h-80 md:h-96 rounded-[2rem] overflow-hidden ring-1 ring-line transition-all duration-700 ease-out hover:ring-gold/40 hover:shadow-[0_25px_60px_-25px_rgba(184,147,90,0.4)] ${
+          className={`relative h-80 md:h-96 rounded-[2rem] overflow-hidden ring-1 ring-line transition-all duration-700 ease-out hover:ring-gold/40 active:ring-gold/40 hover:shadow-[0_25px_60px_-25px_rgba(184,147,90,0.4)] active:shadow-[0_25px_60px_-25px_rgba(184,147,90,0.4)] ${
             mapInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
           }`}
         >

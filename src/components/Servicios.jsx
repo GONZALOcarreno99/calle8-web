@@ -28,7 +28,7 @@ export default function Servicios() {
         </div>
 
         <div className="mt-8 grid sm:grid-cols-2 gap-6">
-          <div className="rounded-[2rem] bg-panel border border-line p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40">
+          <div className="rounded-[2rem] bg-panel border border-line p-6 transition-all duration-300 hover:-translate-y-1 active:-translate-y-1 hover:border-gold/40 active:border-gold/40">
             <p className="text-gold text-xs uppercase tracking-[0.2em] mb-4 text-center">Todos los servicios incluyen</p>
             <div className="space-y-2.5">
               {INCLUYE.map((item) => (
@@ -41,7 +41,7 @@ export default function Servicios() {
               ))}
             </div>
           </div>
-          <div className="rounded-[2rem] bg-panel border border-line p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold/40">
+          <div className="rounded-[2rem] bg-panel border border-line p-6 transition-all duration-300 hover:-translate-y-1 active:-translate-y-1 hover:border-gold/40 active:border-gold/40">
             <p className="text-gold text-xs uppercase tracking-[0.2em] mb-4 text-center">En Calle Ocho también disfrutas</p>
             <div className="space-y-2.5">
               {AMENIDADES.map((item) => (
@@ -68,7 +68,7 @@ export default function Servicios() {
               <div
                 key={e.nombre}
                 style={{ transitionDelay: extrasInView ? `${i * 70}ms` : "0ms" }}
-                className={`flex items-center gap-3 rounded-xl border border-line bg-panel px-4 py-3 transition-all duration-500 hover:border-gold/50 hover:-translate-y-0.5 ${
+                className={`flex items-center gap-3 rounded-xl border border-line bg-panel px-4 py-3 transition-all duration-500 hover:border-gold/50 active:border-gold/50 hover:-translate-y-0.5 active:-translate-y-0.5 ${
                   extrasInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
               >

@@ -27,7 +27,7 @@ export default function CartDrawer() {
           <button
             onClick={() => setOpen(false)}
             aria-label="Cerrar carrito"
-            className="h-9 w-9 rounded-full border border-white/20 flex items-center justify-center transition-all duration-300 hover:border-gold hover:text-gold active:border-gold active:text-gold hover:rotate-90"
+            className="h-9 w-9 rounded-full border border-white/20 flex items-center justify-center transition-all duration-300 hover:border-gold hover:text-gold active:border-gold active:text-gold hover:rotate-90 active:rotate-90"
           >
             ✕
           </button>
@@ -74,7 +74,7 @@ export default function CartDrawer() {
           ))}
 
           {items.length > 0 && (
-            <button onClick={clear} className="text-xs text-white/30 hover:text-white/60 transition-colors underline">
+            <button onClick={clear} className="text-xs text-white/30 hover:text-white/60 active:text-white/60 transition-colors underline">
               Vaciar carrito
             </button>
           )}
