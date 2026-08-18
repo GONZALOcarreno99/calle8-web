@@ -1,5 +1,6 @@
 import { BARBEROS } from "../data/site";
 import BarberCard from "./BarberCard";
+import ComingSoonBarberCard from "./ComingSoonBarberCard";
 
 export default function Barberos() {
   return (
@@ -14,10 +15,11 @@ export default function Barberos() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-12 max-w-3xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-5xl mx-auto">
           {BARBEROS.map((b, index) => (
             <BarberCard key={b.id} b={b} index={index} />
           ))}
+          <ComingSoonBarberCard index={BARBEROS.length} />
         </div>
       </div>
     </section>

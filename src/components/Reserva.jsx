@@ -62,19 +62,22 @@ export default function Reserva() {
 
   function buildMessage() {
     const lines = [
-      "Hola! Quiero reservar una cita en Barbería Calle Ocho.",
-      `Nombre: ${form.nombre}`,
-      `Barbero: ${form.barbero}`,
+      "✂️ *Nueva reserva — Barbería Calle Ocho*",
+      "",
+      `👤 *Nombre:* ${form.nombre}`,
+      `💈 *Barbero:* ${form.barbero}`,
     ];
-    if (paquete) lines.push(`Paquete: ${paquete.nombre} (S/${paquete.precio})`);
-    if (form.corte) lines.push(`Corte o estilo deseado: ${form.corte}`);
+    if (paquete) lines.push(`📦 *Paquete:* ${paquete.nombre} (S/${paquete.precio})`);
+    if (form.corte) lines.push(`✨ *Corte o estilo:* ${form.corte}`);
     if (extrasSeleccionados.length) {
-      lines.push(`Extras: ${extrasSeleccionados.map((e) => `${e.nombre} (S/${e.precio})`).join(", ")}`);
+      lines.push(`➕ *Extras:* ${extrasSeleccionados.map((e) => `${e.nombre} (S/${e.precio})`).join(", ")}`);
     }
-    if (form.fecha) lines.push(`Día preferido: ${formatFecha(form.fecha)}`);
-    if (form.hora) lines.push(`Hora preferida: ${form.hora}`);
-    if (total > 0) lines.push(`Total estimado: S/ ${total}`);
-    lines.push("", "¿Está disponible ese día y hora?");
+    if (form.fecha) lines.push(`📅 *Día preferido:* ${formatFecha(form.fecha)}`);
+    if (form.hora) lines.push(`🕒 *Hora preferida:* ${form.hora}`);
+    if (total > 0) {
+      lines.push("", `💰 *Total estimado:* S/ ${total}`);
+    }
+    lines.push("", "¿Está disponible ese día y hora? 🙌");
     return lines.join("\n");
   }
 
