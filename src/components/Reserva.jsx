@@ -13,7 +13,7 @@ function toLocalDateInput(date) {
 
 const today = toLocalDateInput(new Date());
 const inputClass =
-  "rounded-full bg-ink border border-line px-5 py-3 text-sm text-white normal-case tracking-normal placeholder:text-white/30 focus:outline-none focus:border-gold transition-all duration-300 focus:scale-[1.02] focus:shadow-[0_0_0_3px_rgba(184,147,90,0.15)]";
+  "rounded-full bg-ink border border-line px-5 py-3 text-base md:text-sm text-white normal-case tracking-normal placeholder:text-white/30 focus:outline-none focus:border-gold transition-all duration-300 focus:scale-[1.02] focus:shadow-[0_0_0_3px_rgba(184,147,90,0.15)]";
 
 function Field({ inView, delay, className = "", children }) {
   return (
@@ -88,11 +88,27 @@ export default function Reserva() {
     return lines.join("\n");
   }
 
+  function triggerError(message) {
+    setError("");
+    requestAnimationFrame(() => setError(message));
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
-    if (!form.nombre.trim() || !form.fecha) {
-      setError("");
-      requestAnimationFrame(() => setError("Completa al menos tu nombre y el día que prefieres."));
+    if (!form.nombre.trim()) {
+      triggerError("Escribe tu nombre completo.");
+      return;
+    }
+    if (!form.fecha) {
+      triggerError("Elige el día que prefieres.");
+      return;
+    }
+    if (form.fecha < today) {
+      triggerError("Elegiste un día anterior a hoy. Por favor selecciona una fecha válida.");
+      return;
+    }
+    if (!form.hora) {
+      triggerError("Elige la hora que prefieres.");
       return;
     }
     setError("");
