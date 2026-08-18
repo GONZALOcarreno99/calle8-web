@@ -44,6 +44,26 @@ export default function Reserva() {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    const el = formRef.current;
+    if (!el) return;
+    function onFocusIn(e) {
+      if (["INPUT", "SELECT", "TEXTAREA"].includes(e.target.tagName)) {
+        document.documentElement.classList.add("no-smooth-scroll");
+      }
+    }
+    function onFocusOut() {
+      document.documentElement.classList.remove("no-smooth-scroll");
+    }
+    el.addEventListener("focusin", onFocusIn);
+    el.addEventListener("focusout", onFocusOut);
+    return () => {
+      el.removeEventListener("focusin", onFocusIn);
+      el.removeEventListener("focusout", onFocusOut);
+      document.documentElement.classList.remove("no-smooth-scroll");
+    };
+  }, [formRef]);
+
+  useEffect(() => {
     if (!preset.barbero && !preset.paqueteId) return;
     setForm((f) => ({
       ...f,

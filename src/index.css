@@ -17,6 +17,10 @@ html {
   overflow-x: hidden;
 }
 
+html.no-smooth-scroll {
+  scroll-behavior: auto;
+}
+
 body {
   margin: 0;
   background-color: var(--color-ink);
