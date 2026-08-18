@@ -10,7 +10,7 @@ export default function ServiceCard({ s, index, onReservar }) {
     <div
       ref={ref}
       style={{ transitionDelay: inView ? `${index * 120}ms` : "0ms" }}
-      className={`group relative flex flex-col rounded-[2rem] bg-panel border transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-[0_25px_60px_-20px_rgba(184,147,90,0.4)] ${
+      className={`group relative flex flex-col rounded-[2rem] bg-panel border transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-[0_25px_60px_-20px_rgba(184,147,90,0.4)] active:shadow-[0_25px_60px_-20px_rgba(184,147,90,0.4)] ${
         s.destacado ? "border-gold animate-pulse-gold" : "border-line hover:border-gold/50"
       } ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
     >
@@ -23,13 +23,13 @@ export default function ServiceCard({ s, index, onReservar }) {
       <div className="relative flex flex-1 flex-col overflow-hidden rounded-[2rem] p-8 md:p-9">
         <span className="shine-sweep pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-        <div className="h-14 w-14 rounded-full bg-ink border border-gold/30 flex items-center justify-center text-gold mb-5 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+        <div className="h-14 w-14 rounded-full bg-ink border border-gold/30 flex items-center justify-center text-gold mb-5 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 group-active:scale-110 group-active:rotate-6">
           <ServiceIcon type={s.icono} className="h-6 w-6" />
         </div>
 
         <h3 className="font-display text-3xl tracking-wide">{s.nombre}</h3>
         <p className="text-white/40 text-sm mt-1">{s.subtitulo}</p>
-        <p className="price-glow font-display text-5xl mt-6 text-gold transition-transform duration-300 group-hover:scale-105 origin-left">
+        <p className="price-glow font-display text-5xl mt-6 text-gold transition-transform duration-300 group-hover:scale-105 group-active:scale-105 origin-left">
           S/ {price}
         </p>
 

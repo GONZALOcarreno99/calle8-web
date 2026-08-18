@@ -15,7 +15,7 @@ export default function useReveal(options) {
           observer.disconnect();
         }
       },
-      { threshold: 0.2, ...options }
+      { threshold: 0.1, rootMargin: "0px 0px -8% 0px", ...options }
     );
 
     observer.observe(el);

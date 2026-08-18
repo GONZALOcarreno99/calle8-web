@@ -26,6 +26,8 @@ export default function Hero() {
           <img
             src={galeria5}
             alt="Interior Barbería Calle Ocho"
+            fetchPriority="high"
+            decoding="async"
             style={{ transform: `translateY(${scrollY * 0.25}px)` }}
             className={`h-full w-full object-cover opacity-80 transition-[filter] duration-1000 ease-out will-change-transform ${
               revealed ? "blur-none" : "blur-md"

@@ -17,7 +17,7 @@ export default function ProductCard({ p, index, onAdd }) {
     <div
       ref={ref}
       style={{ transitionDelay: inView ? `${index * 90}ms` : "0ms" }}
-      className={`group relative flex flex-col rounded-[1.5rem] md:rounded-[2rem] border border-line bg-panel overflow-hidden transition-all duration-700 ease-out hover:-translate-y-2 hover:border-gold/50 hover:shadow-[0_25px_60px_-25px_rgba(184,147,90,0.4)] ${
+      className={`group relative flex flex-col rounded-[1.5rem] md:rounded-[2rem] border border-line bg-panel overflow-hidden transition-all duration-700 ease-out hover:-translate-y-2 hover:border-gold/50 hover:shadow-[0_25px_60px_-25px_rgba(184,147,90,0.4)] active:border-gold/50 active:shadow-[0_25px_60px_-25px_rgba(184,147,90,0.4)] ${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
@@ -26,7 +26,7 @@ export default function ProductCard({ p, index, onAdd }) {
           src={p.foto}
           alt={p.nombre}
           loading="lazy"
-          className={`h-full w-full object-cover transition-all duration-1000 ease-out group-hover:scale-110 md:grayscale-[0.25] md:blur-none md:scale-100 md:group-hover:grayscale-0 ${
+          className={`h-full w-full object-cover transition-all duration-1000 ease-out group-hover:scale-110 group-active:scale-110 md:grayscale-[0.25] md:blur-none md:scale-100 md:group-hover:grayscale-0 ${
             inView ? "grayscale-0 blur-none scale-100" : "grayscale-[0.25] blur-md scale-125"
           }`}
         />
@@ -38,7 +38,7 @@ export default function ProductCard({ p, index, onAdd }) {
         <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-white/40 mb-1 md:mb-1.5">{p.categoria}</p>
         <h3 className="font-display text-base md:text-xl tracking-wide">{p.nombre}</h3>
         <p className="text-white/50 text-[11px] md:text-xs mt-2 md:mt-3 leading-relaxed">{p.beneficio}</p>
-        <p className="price-glow text-gold font-semibold text-sm md:text-base mt-3 md:mt-4 transition-transform duration-300 group-hover:scale-110">
+        <p className="price-glow text-gold font-semibold text-sm md:text-base mt-3 md:mt-4 transition-transform duration-300 group-hover:scale-110 group-active:scale-110">
           S/ {price}
         </p>
         <button

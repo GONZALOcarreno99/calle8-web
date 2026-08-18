@@ -4,7 +4,14 @@ import { HORAS_DISPONIBLES, formatFecha } from "../data/horarios";
 import { useReservaPreset } from "../context/ReservaContext";
 import useReveal from "../hooks/useReveal";
 
-const today = new Date().toISOString().split("T")[0];
+function toLocalDateInput(date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+const today = toLocalDateInput(new Date());
 const inputClass =
   "rounded-full bg-ink border border-line px-5 py-3 text-sm text-white normal-case tracking-normal placeholder:text-white/30 focus:outline-none focus:border-gold transition-all duration-300 focus:scale-[1.02] focus:shadow-[0_0_0_3px_rgba(184,147,90,0.15)]";
 

@@ -52,7 +52,8 @@ body {
   }
 }
 
-.group:hover .shine-sweep {
+.group:hover .shine-sweep,
+.group:active .shine-sweep {
   animation: shine 1.1s ease;
 }
 

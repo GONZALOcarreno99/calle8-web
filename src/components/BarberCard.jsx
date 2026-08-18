@@ -13,11 +13,12 @@ export default function BarberCard({ b, index }) {
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
-      <div className="relative w-full max-w-[16rem] aspect-[3/4] rounded-[1.75rem] overflow-hidden ring-1 ring-gold/30 transition-all duration-500 group-hover:ring-gold group-hover:-translate-y-2 group-hover:shadow-[0_25px_55px_-20px_rgba(184,147,90,0.5)]">
+      <div className="relative w-full max-w-[16rem] aspect-[3/4] rounded-[1.75rem] overflow-hidden ring-1 ring-gold/30 transition-all duration-500 group-hover:ring-gold group-active:ring-gold group-hover:-translate-y-2 group-hover:shadow-[0_25px_55px_-20px_rgba(184,147,90,0.5)]">
         <img
           src={b.foto}
           alt={b.nombre}
-          className={`h-full w-full object-cover group-hover:scale-110 transition-all duration-1000 ease-out md:grayscale-[0.4] md:blur-none md:scale-100 md:group-hover:grayscale-0 ${
+          loading="lazy"
+          className={`h-full w-full object-cover group-hover:scale-110 group-active:scale-110 transition-all duration-1000 ease-out md:grayscale-[0.4] md:blur-none md:scale-100 md:group-hover:grayscale-0 ${
             inView ? "grayscale-0 blur-none scale-100" : "grayscale-[0.4] blur-md scale-125"
           }`}
         />
